@@ -72,30 +72,126 @@ Total Test Methods:  47
 
 ---
 
-## 🎯 Test Scenarios Covered
+## 🎯 Cenários de Teste Cobertos
 
-### CRUD Operations
-- ✅ **Create:** Valid data, missing fields, duplicate prevention, validation
-- ✅ **Read:** List all, search/filter, empty results, non-existent records
-- ✅ **Update:** All fields, partial fields, empty values, validation
-- ✅ **Delete:** Successful deletion, non-existent records, cascade handling
+### Operações CRUD
+- ✅ **Create (Criar):** Dados válidos, campos ausentes, prevenção de duplicatas, validação
+- ✅ **Read (Ler):** Listar tudo, busca/filtro, resultados vazios, registros inexistentes
+- ✅ **Update (Atualizar):** Todos os campos, campos parciais, valores vazios, validação
+- ✅ **Delete (Excluir):** Exclusão bem-sucedida, registros inexistentes, tratamento de exclusão em cascata
 
-### Business Logic
-- ✅ **Password Handling:** Hashing, matching passwords, confirmation validation
-- ✅ **Search Functionality:** Partial name matching, empty results, case handling
-- ✅ **Relationships:** Association creation, prevention of duplicates, preservation of existing
-- ✅ **Validation:** Required fields, email formats, password matching
-- ✅ **Error Handling:** 404 responses, validation errors, redirect handling
+### Lógica de Negócio
+- ✅ **Gerenciamento de Senhas:** Hashing, conferência de senhas, validação de confirmação
+- ✅ **Funcionalidade de Busca:** Correspondência parcial de nomes, resultados vazios, tratamento de maiúsculas/minúsculas
+- ✅ **Relacionamentos:** Criação de associações, prevenção de duplicatas, preservação de registros existentes
+- ✅ **Validação:** Campos obrigatórios, formatos de e-mail, conferência de senhas
+- ✅ **Tratamento de Erros:** Respostas 404, erros de validação, tratamento de redirecionamentos
 
-### Edge Cases
-- ✅ Non-existent resource access
-- ✅ Invalid data submission
-- ✅ Missing required fields
-- ✅ Duplicate record prevention
-- ✅ Partial data updates
-- ✅ Empty search results
-- ✅ Cascade operations
-- ✅ Session message verification
+### Casos de Borda (Edge Cases)
+- ✅ Acesso a recurso inexistente
+- ✅ Envio de dados inválidos
+- ✅ Campos obrigatórios ausentes
+- ✅ Prevenção de registros duplicados
+- ✅ Atualizações parciais de dados
+- ✅ Resultados de busca vazios
+- ✅ Operações em cascata
+- ✅ Verificação de mensagens de sessão
+
+## 🎯 Teste Cobertura
+
+  PASS  Tests\Unit\ExampleTest
+  ✓ that true is true                                                         0.06s  
+
+   PASS  Tests\Feature\BibliotecaPessoaControllerTest
+  ✓ create shows add pessoa form                                              9.46s  
+  ✓ create filters already associated pessoas                                 0.40s  
+  ✓ create returns empty when all pessoas associated                          0.39s  
+  ✓ create with nonexistent biblioteca                                        0.33s  
+  ✓ store links pessoa to biblioteca                                          0.44s  
+  ✓ store fails with nonexistent pessoa                                       0.20s  
+  ✓ store fails without pessoa id                                             0.18s  
+  ✓ store fails when pessoa already associated                                0.35s  
+  ✓ store multiple pessoas                                                    0.57s  
+  ✓ store with model binding                                                  0.37s  
+  ✓ store preserves existing associations                                     0.53s  
+
+   PASS  Tests\Feature\BibliotecasControllerTest
+  ✓ index returns view with all bibliotecas                                   0.26s  
+  ✓ index filters bibliotecas by search name                                  0.21s  
+  ✓ index returns empty when search has no results                            0.18s  
+  ✓ create shows form with users                                              0.19s  
+  ✓ store creates biblioteca with valid data                                  0.18s  
+  ✓ store fails with missing fields                                           0.17s  
+  ✓ store creates biblioteca with minimal data                                0.17s  
+  ✓ edit shows form with biblioteca data                                      0.20s  
+  ✓ edit redirects when biblioteca not found                                  0.16s  
+  ✓ update modifies all fields                                                0.18s  
+  ✓ update modifies only provided fields                                      0.17s  
+  ✓ update returns error when biblioteca not found                            0.18s  
+  ✓ update ignores empty values                                               0.18s  
+  ✓ destroy deletes biblioteca                                                0.20s  
+  ✓ destroy returns error when biblioteca not found                           0.17s  
+  ✓ destroy deletes biblioteca with related pessoas                           0.19s  
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ the application returns a successful response                             0.50s  
+
+   PASS  Tests\Feature\PessoaControllerTest
+  ✓ index returns view with all pessoas                                       1.15s  
+  ✓ index returns empty when no pessoas                                       0.21s  
+  ✓ create shows form                                                         0.24s  
+  ✓ store creates pessoa with valid data                                      0.35s  
+  ✓ store fails with mismatched passwords                                     0.18s  
+  ✓ store fails with missing required fields                                  0.48s  
+  ✓ store hashes password                                                     0.55s  
+  ✓ edit shows form with pessoa data                                          0.37s  
+  ✓ edit redirects when pessoa not found                                      0.16s  
+  ✓ update modifies pessoa data                                               0.35s  
+  ✓ update with partial data                                                  0.35s  
+  ✓ update password with matching confirmation                                0.68s  
+  ✓ update fails with mismatched passwords                                    0.36s  
+  ✓ update without password change                                            0.38s  
+  ✓ update redirects when pessoa not found                                    0.17s  
+  ✓ destroy method exists                                                     0.35s  
+
+   PASS  Tests\Feature\UserControllerTest
+  ✓ index returns view with all users                                         0.25s  
+  ✓ index returns empty when no users                                         0.21s  
+  ✓ create shows form                                                         0.26s  
+  ✓ store creates user with valid data                                        0.44s  
+  ✓ store fails with missing name                                             0.20s  
+  ✓ store fails with duplicate email                                          0.15s  
+  ✓ store hashes password                                                     0.51s  
+  ✓ show returns user data                                                    0.21s  
+  ✓ show redirects when user not found                                        0.17s  
+  ✓ edit shows form with user data                                            0.19s  
+  ✓ edit redirects when user not found                                        0.17s  
+  ✓ update modifies user data                                                 0.17s  
+  ✓ update with partial data                                                  0.19s  
+  ✓ update redirects when user not found                                      0.20s  
+  ✓ update fails with duplicate email                                         0.18s  
+  ✓ destroy deletes user                                                      0.17s  
+  ✓ destroy redirects when user not found                                     0.16s  
+  ✓ destroy removes user from database                                        0.17s  
+
+  Tests:    63 passed (110 assertions)
+  Duration: 34.79s
+
+  Http/Controllers/AutorController ........................................... 0.0%  
+  Http/Controllers/BibliotecaPessoaController .......................... 31 / 95.0%  
+  Http/Controllers/BibliotecasController ........... 36..37, 69..70, 85..86 / 84.6%  
+  Http/Controllers/Controller .............................................. 100.0%  
+  Http/Controllers/LivroController ......................................... 100.0%  
+  Http/Controllers/PessoaController ................................ 74..75 / 93.9%  
+  Http/Controllers/UserController ............ 48..49, 82, 87..88, 103..104 / 84.8%  
+  Models/Autor ............................................................... 0.0%  
+  Models/Biblioteca .................................................... 27 / 66.7%  
+  Models/Livro ............................................................... 0.0%  
+  Models/Pessoa ............................................................ 100.0%  
+  Models/User ...................................................... 33..75 / 41.7%  
+  Providers/AppServiceProvider ............................................. 100.0%  
+  ─────────────────────────────────────────────────────────────────────────────────  
+                                                                      Total: 74.3 %  
 
 ---
 
