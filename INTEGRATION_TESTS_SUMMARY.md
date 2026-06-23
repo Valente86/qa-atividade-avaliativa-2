@@ -1,41 +1,40 @@
-# Integration Tests Implementation Summary
+# Resumo da Implementação de Testes de Integração
 
-## Activity Completion Status: ✅ COMPLETED
+## Status de Conclusão da Atividade: ✅ CONCLUÍDO
 
-This document summarizes the comprehensive integration test suite implemented for the Biblioteca Management Application (Atividade Avaliativa 2 - Qualidade de Software).
+Este documento resume o conjunto abrangente de testes de integração implementado para o Aplicativo de Gerenciamento de Biblioteca (Atividade Avaliativa 2 – Qualidade de Software).
 
 ---
 
-## 📋 Task Requirements Met
+## 📋 Requisitos da Tarefa Atendidos
 
-### ✅ Requirement 1: Create Feature Branch
-- **Status:** COMPLETED
+### ✅ Requisito 1: Criar Branch de Funcionalidade (Feature Branch)
+- **Status:** CONCLUÍDO
 - **Branch:** `feature/integration-tests-coverage`
-- **Base:** Created from `master` branch
-- **Workflow:** All changes committed to feature branch (no direct work on master)
+- **Base:** Criada a partir da branch `master`
+- **Fluxo de Trabalho:** Todas as alterações foram commitadas na branch de funcionalidade (sem trabalho direto na `master`)
 
-### ✅ Requirement 2: Implement Integration Tests
-- **Status:** COMPLETED
-- **Coverage:** All primary endpoints tested
-- **Test Methods:** 47 comprehensive integration tests
-- **Test Files:** 4 feature test files
+### ✅ Requisito 2: Implementar Testes de Integração
+- **Status:** CONCLUÍDO
+- **Cobertura:** Todos os endpoints principais testados
+- **Métodos de Teste:** 47 testes de integração abrangentes
+- **Arquivos de Teste:** 4 arquivos de teste de funcionalidade
 
-### ✅ Requirement 3: Utilize AI Tools
-- **Status:** COMPLETED
-- **Tools Used:** GitHub Copilot (assisted in code generation and test scenario definition)
-- **Approach:** AI used to streamline development while maintaining focus on comprehensive scenario coverage
-- **Focus:** Quality test coverage over quantity of generated code
+### ✅ Requisito 3: Utilizar Ferramentas de IA
+- **Status:** CONCLUÍDO
+- **Ferramentas Utilizadas:** GitHub Copilot (auxiliou na geração de código e na definição de cenários de teste)
+- **Abordagem:** IA utilizada para agilizar o desenvolvimento, mantendo o foco na cobertura abrangente de cenários
+- **Foco:** Qualidade da cobertura de testes em detrimento da quantidade de código gerado
 
-### ✅ Requirement 4: Configure GitHub Actions Workflow
-- **Status:** DOCUMENTED (Ready for Implementation)
-- **Workflow File:** Detailed setup guide provided
-- **Automation:** Runs tests on every pull request to develop/master
-
+### ✅ Requisito 4: Configurar Fluxo de Trabalho do GitHub Actions
+- **Status:** DOCUMENTADO (Pronto para Implementação)
+- **Arquivo de Fluxo de Trabalho:** Guia de configuração detalhado fornecido
+- **Automação:** Executa testes a cada *pull request* para as branches `develop` ou `master`
 ---
 
-## 📊 Test Suite Overview
+## 📊 Visão Geral da Suíte de Testes
 
-### Test Coverage Breakdown
+### Detalhamento da Cobertura de Testes
 
 ```
 Total Test Methods:  47
@@ -45,7 +44,7 @@ Total Test Methods:  47
 └── BibliotecaPessoaControllerTest:  10 tests
 ```
 
-### Endpoints Covered
+### Endpoints abordados
 
 | Controller | Method | Endpoint | Tests |
 |-----------|--------|----------|-------|
