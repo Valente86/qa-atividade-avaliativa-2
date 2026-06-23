@@ -119,6 +119,77 @@ Total Test Methods:  47
 
 **Total: 47 métodos de teste de integração**
 
+
+Cenários de Teste Cobertos
+BibliotecasController (Gerenciamento de Bibliotecas)
+Operações de LEITURA (READ)
+✅ Listar todas as bibliotecas sem filtros
+✅ Buscar bibliotecas por nome (com correspondência parcial)
+✅ Lidar com resultados de busca vazios
+✅ Exibir formulário de criação com usuários disponíveis
+Operações de CRIAÇÃO (CREATE)
+✅ Criar biblioteca com dados válidos (todos os campos)
+✅ Criar biblioteca com dados mínimos
+✅ Falhar na validação com campos obrigatórios ausentes
+Operações de ATUALIZAÇÃO (UPDATE)
+✅ Atualizar todos os campos de uma biblioteca
+✅ Atualizar apenas campos específicos (atualização parcial)
+✅ Lidar com biblioteca inexistente (erro 404)
+✅ Ignorar valores vazios na atualização
+Operações de EXCLUSÃO (DELETE)
+✅ Excluir biblioteca existente
+✅ Lidar com exclusão de biblioteca inexistente
+✅ Excluir biblioteca com pessoas associadas (em cascata)
+UserController (Gerenciamento de Usuários)
+Operações de LEITURA (READ)
+✅ Listar todos os usuários
+✅ Lidar com lista de usuários vazia
+✅ Mostrar detalhes de um usuário específico
+✅ Lidar com acesso a usuário inexistente
+Operações de CRIAÇÃO (CREATE)
+✅ Criar usuário com dados de cadastro válidos
+✅ Aplicar hash na senha durante a criação
+✅ Impedir cadastro com e-mail duplicado
+✅ Falhar na validação com campos ausentes
+Operações de ATUALIZAÇÃO (UPDATE)
+✅ Atualizar todos os campos do usuário
+✅ Atualizar informações parciais do usuário
+✅ Lidar com atualização de usuário inexistente
+✅ Impedir e-mail duplicado na atualização
+Operações de EXCLUSÃO (DELETE)
+✅ Excluir usuário existente
+✅ Lidar com exclusão de usuário inexistente
+✅ Remover usuário do banco de dados
+PessoaController (Gerenciamento de Pessoas)
+Operações de LEITURA (READ)
+✅ Listar todas as pessoas
+✅ Lidar com lista vazia
+✅ Exibir formulário de criação
+Operações de CRIAÇÃO (CREATE)
+✅ Criar pessoa com dados válidos
+✅ Validar correspondência de senhas
+✅ Aplicar hash na senha ao armazenar
+✅ Falhar com senhas divergentes
+Operações de ATUALIZAÇÃO (UPDATE)
+✅ Atualizar todos os campos da pessoa
+✅ Atualizar dados parciais da pessoa
+✅ Atualizar senha com confirmação
+✅ Ignorar atualização de senha se estiver vazia
+✅ Validar correspondência de senhas na atualização
+Operações de EXCLUSÃO (DELETE)
+✅ Método destroy existe (parcialmente implementado)
+BibliotecaPessoaController (Associações)
+Operações de FORMULÁRIO (FORM)
+✅ Exibir formulário para adicionar pessoa
+✅ Filtrar pessoas já associadas
+✅ Lidar com lista vazia quando todas estiverem associadas
+Operações de VINCULAÇÃO (LINK)
+✅ Vincular pessoa à biblioteca com sucesso
+✅ Impedir vinculação de pessoa inexistente
+✅ Impedir associações duplicadas
+✅ Vincular múltiplas pessoas sequencialmente
+✅ Preservar associações existentes (syncWithoutDetaching)
+
 ## 🎯 Teste Cobertura
 
   PASS  Tests\Unit\ExampleTest
