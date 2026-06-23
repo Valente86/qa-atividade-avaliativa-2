@@ -97,6 +97,28 @@ Total Test Methods:  47
 - ✅ Operações em cascata
 - ✅ Verificação de mensagens de sessão
 
+## Resumo de Testes de Cobertura
+
+### Arquivos de Teste Criados
+
+1. **BibliotecasControllerTest.php** - Testes de Gerenciamento de Bibliotecas
+- 12 métodos de teste
+- Abrange: index, create, store, edit, update, destroy
+
+2. **UserControllerTest.php** - Testes de Gerenciamento de Usuários
+- 14 métodos de teste
+- Abrange: index, show, create, store, edit, update, destroy
+
+3. **PessoaControllerTest.php** - Testes de Gerenciamento de Pessoas
+- 11 métodos de teste
+- Abrange: index, create, store, edit, update, manipulação de senha, destroy
+
+4. **BibliotecaPessoaControllerTest.php** - Testes de Associação Biblioteca-Pessoa
+- 10 métodos de teste
+- Abrange: create (exibição do formulário), store (vinculação), cenários de erro
+
+**Total: 47 métodos de teste de integração**
+
 ## 🎯 Teste Cobertura
 
   PASS  Tests\Unit\ExampleTest
